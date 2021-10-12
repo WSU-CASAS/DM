@@ -82,28 +82,22 @@ class Location:
     def generate_location_num(name):
         """ Transform a location type into an index value.
         """
-        if name == 'house':
+        if name == 'attraction':
             return 0
-        elif name == 'road':
-            return 1
-        elif name == 'work':
-            return 2
-        else:
-            return 3
-
-    @staticmethod
-    def generate_location_features(name):
-        """ Transform a location type into a vector using one-shot encoding.
-        The location types are house, road, work, or other.
-        """
         if name == 'house':
-            return 1, 0, 0, 0
+            return 1
+        elif name == 'restaurant':
+            return 2
         elif name == 'road':
-            return 0, 1, 0, 0
+            return 3
+        elif name == 'service':
+            return 4
+        elif name == 'store':
+            return 5
         elif name == 'work':
-            return 0, 0, 1, 0
+            return 6
         else:
-            return 0, 0, 0, 1
+            return 7
 
     def read_location_mappings(self):
         """ Generate a translate list for location names.

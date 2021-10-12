@@ -35,15 +35,13 @@ class Config:
         self.activity_pos = 51
         self.missing_value_pos = 52
         self.num_activities = 33
-        self.num_locations = 4
+        self.num_locations = 8
         self.datapath = './'
         self.minutes_in_day = 1440
         self.translate = False
 
         # list of activity classes for overall activity
-        self.activity_list = ['Chores', 'Eat', 'Entertainment', 'Errands',
-                              'Exercise', 'Hobby', 'Hygiene', 'Relax', 'School',
-                              'Sleep', 'Travel', 'Work']
+        self.activity_list = ['Errands', 'Exercise', 'Hobby', 'Housework', 'Hygiene', 'Mealtime', 'Other', 'Relax', 'Sleep', 'Socialize', 'Travel', 'Work']
 
     def set_parameters(self, args):
         """ Set parameters according to command-line args list.

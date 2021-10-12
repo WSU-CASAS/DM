@@ -121,7 +121,8 @@ class BehaviorStats:
         new_days = [[0.0 for j in range(24)] for i in range(7)]
         new_days = self.compute_new_days(new_days, days)
 
-        indices = list()  # pairs within week
+        # pairs within week
+        indices = list()
         for i in range(7):
             for j in range(7):
                 if i != j:
@@ -134,7 +135,8 @@ class BehaviorStats:
                         indices.append(0.0)
         vals.append(np.mean(indices))
 
-        indices = list()  # pairs within weekdays
+        # pairs within weekdays
+        indices = list()
         for i in range(5):
             for j in range(5):
                 if i != j:
@@ -147,9 +149,11 @@ class BehaviorStats:
                         indices.append(0.0)
         vals.append(np.mean(indices))
 
-        indices = list()  # pairs between weeks
+        # pairs between weeks
+        indices = list()
         if numweeks < 2:
-            vals.append(0.0)
+            for i in range(7):
+                vals.append(0.0)
         else:
             for i in range(7):
                 group_days = days[i::7]

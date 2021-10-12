@@ -90,7 +90,7 @@ def main():
     behavior_change = bcd.BCD()  # Generate weekly change from baseline
     change_scores = behavior_change.bcd(day_values, hour_values)
     printheader.print_markers(filename, day_values, hour_values,
-                              behavior_markers, change_scores, dm, day, hour, bm, False)
+                              behavior_markers, change_scores, dm, day, hour, bm, True)
 
 
 if __name__ == "__main__":
