@@ -19,7 +19,7 @@ import numpy as np
 import config
 
 # global variables
-original_sample_rate = 1  # number of samples per second
+original_sample_rate = 600  # number of samples per minute
 new_sample_rate = 1
 downrate = int(original_sample_rate / new_sample_rate)
 
