@@ -91,20 +91,6 @@ class Location:
         else:
             return 3
 
-    @staticmethod
-    def generate_location_features(name):
-        """ Transform a location type into a vector using one-shot encoding.
-        The location types are house, road, work, or other.
-        """
-        if name == 'house':
-            return 1, 0, 0, 0
-        elif name == 'road':
-            return 0, 1, 0, 0
-        elif name == 'work':
-            return 0, 0, 1, 0
-        else:
-            return 0, 0, 0, 1
-
     def read_location_mappings(self):
         """ Generate a translate list for location names.
         This function assumes that file l.translate exists in the same directory
